@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
+import botRouter from "./Routes/BotRoute.js";
 
 dotenv.config();
 
@@ -12,6 +13,9 @@ app.use(cors());
 
 // Enable JSON data transfer
 app.use(express.json());
+
+// routes
+app.use("/api/v1/bot", botRouter);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
