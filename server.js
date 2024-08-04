@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import botRouter from "./Routes/BotRoute.js";
+import botRouter from "./V1/Routes/BotRoute.js";
 
 dotenv.config();
 
